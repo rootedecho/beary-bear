@@ -76,6 +76,14 @@
       margin-top: 40px;
       margin-bottom: 20px;
     }
+
+    #heartMsg {
+      display: none;
+      font-style: italic;
+      margin-top: 10px;
+      transition: opacity 0.4s ease;
+      opacity: 0;
+    }
   </style>
 </head>
 <body>
@@ -84,23 +92,19 @@
       <h1>To The Love of My Life</h1>
 
       <p>Isaac, you will always be the cookies to my cream, the rice to my sushi, and the passionfruit to my iced tea.</p>
-
       <p>I promised I’ll always be right by your side, always loving you and supporting you because you’re the only guy I wanna do life with. That is, and will always be true.</p>
-
       <p>I thought I knew what my favorite 2 colors were, but that was until I saw your beautiful hazel eyes; the ones I could get lost in for hours.</p>
-
       <p>I don’t wanna spend a second without you; I adore you endlessly and I can't wait to be with you for the rest of my life, beary bear.</p>
 
       <h2>Our Songs</h2>
 
       <iframe src="https://open.spotify.com/embed/track/7mykoq6R3BArsSpNDjFQTm?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                 <iframe src="https://open.spotify.com/embed/track/0j3mqDTK4Z6lvrLzFCUUz6?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                <iframe src="https://open.spotify.com/embed/track/2ispbUjxKz1K2j5zE9eNwu?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-  <iframe src="https://open.spotify.com/embed/track/02xhLoVqpGmOqvolgrwM8w?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe src="https://open.spotify.com/embed/track/0j3mqDTK4Z6lvrLzFCUUz6?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe src="https://open.spotify.com/embed/track/2ispbUjxKz1K2j5zE9eNwu?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe src="https://open.spotify.com/embed/track/02xhLoVqpGmOqvolgrwM8w?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe src="https://open.spotify.com/embed/track/4DgsvJNNGvV5WPQ40qR3R8?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe src="https://open.spotify.com/embed/track/52abQEHHYwE5eGxLG0zcH5" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>   
 
-   
-       <iframe src="https://open.spotify.com/embed/track/4DgsvJNNGvV5WPQ40qR3R8?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-<iframe src="https://open.spotify.com/embed/track/52abQEHHYwE5eGxLG0zcH5" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>   
       <h2>Reminders</h2>
       <ul class="reminders">
         <li>You will never be alone in this world, not when I'm here.</li>
@@ -109,7 +113,29 @@
         <li>I will always enjoy listening to you speak for hours on end, and hearing your voice.</li>
         <li>You can bring me your worst days and darkest thoughts, and I'll still be here. Always.</li>
       </ul>
+
+      <div style="text-align:center; margin-top: 40px;">
+        <button id="heartButton" style="font-size: 40px; background: none; border: none; cursor: pointer;">❤</button>
+        <p id="heartMsg">I keep this here to remind you that even when I’m not around, my heart still is.</p>
+      </div>
     </div>
   </div>
+
+  <script>
+    window.addEventListener("DOMContentLoaded", function() {
+      const button = document.getElementById("heartButton");
+      const msg = document.getElementById("heartMsg");
+
+      button.addEventListener("click", function () {
+        if (msg.style.display === "none" || msg.style.opacity === "0") {
+          msg.style.display = "block";
+          setTimeout(() => { msg.style.opacity = 1; }, 10);
+        } else {
+          msg.style.opacity = 0;
+          setTimeout(() => { msg.style.display = "none"; }, 400);
+        }
+      });
+    });
+  </script>
 </body>
 </html>
