@@ -130,29 +130,10 @@
   <li>Pretending not to be tired then falling asleep on your chair 5 minutes later.</li>
   <li>Playing an imaginary guitar, and drums when listening to music.</li>
   <li>Twirly wirly—need I say more?</li>
+  <li>Stimming when you find something cute</li>
+  <li>Bopping your head when you laugh</li>
+  <li>Sticking your tongue out before saying something offensive</li>
 
-    <div style="text-align:center; margin-top: 40px;">
-        <button id="heartButton" style="font-size: 40px; background: none; border: none; cursor: pointer;">♥</button>
-        <p id="heartMsg">I keep this here to remind you that even when I’m not around, my heart still is.</p>
-      </div>
-    </div>
-  </div>
 
-  <script>
-    window.addEventListener("DOMContentLoaded", function() {
-      const button = document.getElementById("heartButton");
-      const msg = document.getElementById("heartMsg");
 
-      button.addEventListener("click", function () {
-        if (msg.style.display === "none" || msg.style.opacity === "0") {
-          msg.style.display = "block";
-          setTimeout(() => { msg.style.opacity = 1; }, 10);
-        } else {
-          msg.style.opacity = 0;
-          setTimeout(() => { msg.style.display = "none"; }, 400);
-
-        }
-      });
-    });
-  </script>
-</body>
+</ul>
