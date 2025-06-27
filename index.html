@@ -108,6 +108,32 @@
     }
   </style>
 </head>
+  <script>
+  function updateCountup() {
+    const startDate = new Date('2025-01-01T00:00:00');
+    const now = new Date();
+    let diff = now - startDate;
+
+    if(diff < 0) {
+      document.getElementById('countup').textContent = "The journey is about to begin...";
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    diff -= days * (1000 * 60 * 60 * 24);
+    const hours = Math.floor(diff / (1000 * 60 * 60));
+    diff -= hours * (1000 * 60 * 60);
+    const minutes = Math.floor(diff / (1000 * 60));
+
+    document.getElementById('countup').textContent = 
+      ${days} days, ${hours} hours, and ${minutes} minutes together;
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    updateCountup();
+    setInterval(updateCountup, 60000); // update every minute
+  });
+</script>
 <body>
   <div class="page-wrapper">
     <div class="content">
@@ -143,8 +169,9 @@
   <blockquote>“I had never met a soul that could speak my language, until there was you. You are fluent in me.”</blockquote>
   <blockquote>“If you were the sun, I would continue to stare at you, even if it costs me my vision; for I would know the last thing I saw was perfection.”</blockquote>
   <blockquote>“I could fill oceans for what I feel for you.”</blockquote>
-  <blockquote>“If we were two sunflowers, I would have faced you instead of the sun.”</blockquote>
   <blockquote>“You are every lovely thing I could possibly think of.”</blockquote>
+  <blockquote>“If we were two sunflowers, I would have faced you instead of the sun.”</blockquote>
+
 
 
 </div>
@@ -162,14 +189,19 @@
   <li>Scrunching your nose when you disagree with me.</li>
   <li>The way you say "huh" or "must've been the birds", when pretending not to have said something.</li>
 
+  <div class="countup-timer" style="text-align:center; margin-top: 60px;">
+  <h2>How Long We've Been Us</h2>
+  <p id="countup" style="font-style: italic; font-size: 22px; margin-top: 10px;"></p>
+</div>
+
  <div class="poem-section">
   <h2>Poetry For You</h2>
   <div class="poem">
     <strong>Time</strong><br>
-    Eyes illuminating like a sunset in the temperate summer<br>
+    Eyes illuminating like a sunset in the summer<br>
     Messy curly hair; a talented former drummer<br>
-    Amorous stares, those I'd never give to another<br>
-    A million years could pass, to me he’d always be the perfect lover<br><br>
+    Amorous stares, those I could never give to another<br>
+    A million years could pass, to me he's the perfect lover<br><br>
 
     <strong>Tranquility</strong><br>
     Wrapped around your arms, I sleep and feel serene<br>
