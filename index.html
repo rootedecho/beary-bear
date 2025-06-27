@@ -18,7 +18,7 @@
     .page-wrapper {
       width: 100vw;
       max-width: 100%;
-      min-height: 960px;
+      min-height: 940px;
       position: relative;
       background-image: url('https://i.pinimg.com/originals/6f/bb/63/6fbb634a2a22545d2fe04cd21b3077ba.gif');
       background-repeat: no-repeat;
@@ -37,7 +37,7 @@
 
     h1, h2 {
       text-align: center;
-      color: #f0f0ff;
+      color: #ffffff;
       font-style: normal;
       margin-top: 40px;
       margin-bottom: 20px;
@@ -177,12 +177,7 @@
         <li>Scrunching your nose when you disagree with me.</li>
         <li>The way you say "huh" or "must've been the birds", when pretending not to have said something.</li>
       </ul>
-
-      <div class="countup-timer">
-        <h2>How Long We've Been Us</h2>
-        <p id="countup"></p>
-      </div>
-
+      
       <div class="poem-section">
         <h2>Poetry For You</h2>
         <div class="poem">
@@ -205,44 +200,8 @@
     </div>
   </div>
 
-  <script>
-    window.addEventListener("DOMContentLoaded", function () {
-      const button = document.getElementById("heartButton");
-      const msg = document.getElementById("heartMsg");
-
-      button.addEventListener("click", function () {
-        if (msg.style.display === "none" || msg.style.opacity === "0" || !msg.style.display) {
-          msg.style.display = "block";
-          setTimeout(() => { msg.style.opacity = 1; }, 10);
-        } else {
-          msg.style.opacity = 0;
-          setTimeout(() => { msg.style.display = "none"; }, 400);
-        }
-      });
-
-      function updateCountup() {
-        const startDate = new Date('2025-01-01T00:00:00');
-        const now = new Date();
-        let diff = now - startDate;
-
-        if (diff < 0) {
-          document.getElementById('countup').textContent = "The journey is about to begin...";
-          return;
-        }
-
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        diff -= days * (1000 * 60 * 60 * 24);
-        const hours = Math.floor(diff / (1000 * 60 * 60));
-        diff -= hours * (1000 * 60 * 60);
-        const minutes = Math.floor(diff / (1000 * 60));
-
-        document.getElementById('countup').textContent =
-          ${days} days, ${hours} hours, and ${minutes} minutes together;
-      }
-
-      updateCountup();
-      setInterval(updateCountup, 60000);
-    });
+ 
+        
   </script>
 </body>
 </html>
