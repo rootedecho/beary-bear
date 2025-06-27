@@ -164,9 +164,9 @@
       <div class="poem">
         <strong>Time</strong><br>
         Eyes illuminating like a sunset in the summer<br>
-        Messy curly hair; a talented former drummer<br>
+        Messy curly hair; a talented former drummer<br
         Amorous stares, those I could never give to another<br>
-        A million years could pass, to me he's the perfect lover<br><br>
+       A million years could pass, to me he's the perfect lover<br><br>
 
         <strong>Tranquility</strong><br>
         Wrapped around your arms, I sleep and feel serene<br>
@@ -174,53 +174,13 @@
         Every moment we’ve had is straight out of a dream<br>
         My heart will never be the same, you beautifully tore it at the seam
       </div>
-
-      <div class="countup-timer">
-        <h2>How Long We've Been Us</h2>
-        <p id="countup"></p>
-      </div>
-
+      
       <button id="heartButton">𓆩❤𓆪</button>
       <p id="heartMsg">I keep this here to remind you that even when I’m not around, my heart still is.</p>
     </div>
   </div>
 
-  <script>
-    const button = document.getElementById("heartButton");
-    const msg = document.getElementById("heartMsg");
 
-    button.addEventListener("click", function () {
-      if (msg.style.display === "none" || msg.style.opacity === "0" || !msg.style.display) {
-        msg.style.display = "block";
-        setTimeout(() => { msg.style.opacity = 1; }, 10);
-      } else {
-        msg.style.opacity = 0;
-        setTimeout(() => { msg.style.display = "none"; }, 400);
-      }
-    });
-
-    function updateCountup() {
-      const startDate = new Date('2025-01-01T00:00:00');
-      const now = new Date();
-      let diff = now - startDate;
-
-      if (diff < 0) {
-        document.getElementById('countup').textContent = "The journey is about to begin...";
-        return;
-      }
-
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      diff -= days * (1000 * 60 * 60 * 24);
-      const hours = Math.floor(diff / (1000 * 60 * 60));
-      diff -= hours * (1000 * 60 * 60);
-      const minutes = Math.floor(diff / (1000 * 60));
-
-      document.getElementById('countup').textContent =
-        ${days} days, ${hours} hours, and ${minutes} minutes together;
-    }
-
-    updateCountup();
-    setInterval(updateCountup, 60000);
   </script>
 </body>
 </html>
