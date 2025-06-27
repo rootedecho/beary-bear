@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>To The Love of My Life</title>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
   <style>
     html, body {
       margin: 0;
@@ -12,23 +12,23 @@
       color: white;
       background: black;
       font-size: 20px;
-      min-height: 100vh;    }
+      line-height: 1.8;
+      min-height: 100vh;
+    }
 
     .page-wrapper {
-      width: 100vw;
-      max-width: 100%;
-      min-height: 100%;
-      position: relative;
+      min-height: 100vh;
       background-image: url('https://i.pinimg.com/originals/6f/bb/63/6fbb634a2a22545d2fe04cd21b3077ba.gif');
       background-repeat: no-repeat;
       background-position: center top;
       background-size: cover;
       overflow-x: hidden;
+      padding-bottom: 60px;
     }
 
     .content {
       max-width: 700px;
-      margin: 20px auto 60px auto;
+      margin: 0 auto;
       padding: 40px 20px;
       background-color: rgba(0, 0, 0, 0.4);
       border-radius: 12px;
@@ -36,7 +36,7 @@
 
     h1, h2 {
       text-align: center;
-      color: #ffffff;
+      color: #f0f0ff;
       font-style: normal;
       margin-top: 40px;
       margin-bottom: 20px;
@@ -47,10 +47,13 @@
       font-size: 2em;
     }
 
-    p {
+    p,
+    ul.reminders li,
+    blockquote,
+    .poem {
       font-style: italic;
-      margin: 0 0 18px 0;
       text-align: center;
+      margin-bottom: 20px;
     }
 
     iframe {
@@ -64,35 +67,17 @@
     ul.reminders {
       list-style: none;
       padding: 0;
-      text-align: center;
+      max-width: 600px;
       margin: 0 auto 40px auto;
-      max-width: 600px;
-    }
-
-    ul.reminders li {
-      margin-bottom: 12px;
-      font-style: italic;
-    }
-
-    blockquote {
-      font-style: italic;
-      text-align: center;
-      margin: 0 0 18px 0;
-      line-height: 1.5;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
     }
 
     .poem {
       white-space: pre-line;
-      font-style: italic;
       font-size: 20px;
       color: white;
-      line-height: 1.5;
-      text-align: center;
-      margin-top: 10px;
-      margin-bottom: 40px;
+      line-height: 1.8;
+      margin: 0 auto 40px auto;
+      max-width: 600px;
     }
 
     .countup-timer {
@@ -138,11 +123,11 @@
       <p>I don’t wanna spend a second without you; I adore you endlessly and I can't wait to be with you for the rest of my life, beary bear.</p>
 
       <h2>Our Songs</h2>
-      <iframe src="https://open.spotify.com/embed/track/7mykoq6R3BArsSpNDjFQTm?utm_source=generator" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-      <iframe src="https://open.spotify.com/embed/track/0j3mqDTK4Z6lvrLzFCUUz6?utm_source=generator" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-      <iframe src="https://open.spotify.com/embed/track/2ispbUjxKz1K2j5zE9eNwu?utm_source=generator" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-      <iframe src="https://open.spotify.com/embed/track/02xhLoVqpGmOqvolgrwM8w?utm_source=generator" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-      <iframe src="https://open.spotify.com/embed/track/4DgsvJNNGvV5WPQ40qR3R8?utm_source=generator" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+      <iframe src="https://open.spotify.com/embed/track/7mykoq6R3BArsSpNDjFQTm" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+      <iframe src="https://open.spotify.com/embed/track/0j3mqDTK4Z6lvrLzFCUUz6" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+      <iframe src="https://open.spotify.com/embed/track/2ispbUjxKz1K2j5zE9eNwu" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+      <iframe src="https://open.spotify.com/embed/track/02xhLoVqpGmOqvolgrwM8w" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+      <iframe src="https://open.spotify.com/embed/track/4DgsvJNNGvV5WPQ40qR3R8" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
       <iframe src="https://open.spotify.com/embed/track/52abQEHHYwE5eGxLG0zcH5" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 
       <h2>Reminders</h2>
@@ -155,13 +140,11 @@
       </ul>
 
       <h2>Quotes That Remind Me of You</h2>
-      <div style="text-align:center; font-style: italic; max-width: 600px; margin: 0 auto 40px auto;">
-        <blockquote>“I had never met a soul that could speak my language, until there was you. You are fluent in me.”</blockquote>
-        <blockquote>“If you were the sun, I would continue to stare at you, even if it costs me my vision; for I would know the last thing I saw was perfection.”</blockquote>
-        <blockquote>“I could fill oceans for what I feel for you.”</blockquote>
-        <blockquote>“You are every lovely thing I could possibly think of.”</blockquote>
-        <blockquote>“If we were two sunflowers, I would have faced you instead of the sun.”</blockquote>
-      </div>
+      <blockquote>“I had never met a soul that could speak my language, until there was you. You are fluent in me.”</blockquote>
+      <blockquote>“If you were the sun, I would continue to stare at you, even if it costs me my vision; for I would know the last thing I saw was perfection.”</blockquote>
+      <blockquote>“I could fill oceans for what I feel for you.”</blockquote>
+      <blockquote>“You are every lovely thing I could possibly think of.”</blockquote>
+      <blockquote>“If we were two sunflowers, I would have faced you instead of the sun.”</blockquote>
 
       <h2>Your Signature Moves</h2>
       <ul class="reminders">
@@ -176,31 +159,68 @@
         <li>Scrunching your nose when you disagree with me.</li>
         <li>The way you say "huh" or "must've been the birds", when pretending not to have said something.</li>
       </ul>
-      
-      <div class="poem-section">
-        <h2>Poetry For You</h2>
-        <div class="poem">
-          <strong>Time</strong><br>
-          Eyes illuminating like a sunset in the summer<br>
-          Messy curly hair; a talented former drummer<br>
-          Amorous stares, those I could never give to another<br>
-          A million years could pass, to me he's the perfect lover<br><br>
 
-          <strong>Tranquility</strong><br>
-          Wrapped around your arms, I sleep and feel serene<br>
-          Looking up at your smile, the sweetest thing I’ve ever seen<br>
-          Every moment we’ve had is straight out of a dream<br>
-          My heart will never be the same, you beautifully tore it at the seam
-        </div>
+      <h2>Poetry For You</h2>
+      <div class="poem">
+        <strong>Time</strong><br>
+        Eyes illuminating like a sunset in the summer<br>
+        Messy curly hair; a talented former drummer<br>
+        Amorous stares, those I could never give to another<br>
+        A million years could pass, to me he's the perfect lover<br><br>
+
+        <strong>Tranquility</strong><br>
+        Wrapped around your arms, I sleep and feel serene<br>
+        Looking up at your smile, the sweetest thing I’ve ever seen<br>
+        Every moment we’ve had is straight out of a dream<br>
+        My heart will never be the same, you beautifully tore it at the seam
       </div>
 
-      <button id="heartButton" aria-label="Show heart message">𓆩❤𓆪</button>
+      <div class="countup-timer">
+        <h2>How Long We've Been Us</h2>
+        <p id="countup"></p>
+      </div>
+
+      <button id="heartButton">𓆩❤𓆪</button>
       <p id="heartMsg">I keep this here to remind you that even when I’m not around, my heart still is.</p>
     </div>
   </div>
 
- 
-        
+  <script>
+    const button = document.getElementById("heartButton");
+    const msg = document.getElementById("heartMsg");
+
+    button.addEventListener("click", function () {
+      if (msg.style.display === "none" || msg.style.opacity === "0" || !msg.style.display) {
+        msg.style.display = "block";
+        setTimeout(() => { msg.style.opacity = 1; }, 10);
+      } else {
+        msg.style.opacity = 0;
+        setTimeout(() => { msg.style.display = "none"; }, 400);
+      }
+    });
+
+    function updateCountup() {
+      const startDate = new Date('2025-01-01T00:00:00');
+      const now = new Date();
+      let diff = now - startDate;
+
+      if (diff < 0) {
+        document.getElementById('countup').textContent = "The journey is about to begin...";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      diff -= days * (1000 * 60 * 60 * 24);
+      const hours = Math.floor(diff / (1000 * 60 * 60));
+      diff -= hours * (1000 * 60 * 60);
+      const minutes = Math.floor(diff / (1000 * 60));
+
+      document.getElementById('countup').textContent =
+        ${days} days, ${hours} hours, and ${minutes} minutes together;
+    }
+
+    updateCountup();
+    setInterval(updateCountup, 60000);
   </script>
 </body>
 </html>
