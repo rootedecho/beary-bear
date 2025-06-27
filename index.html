@@ -10,9 +10,9 @@
       padding: 0;
       font-family: 'Open Sans', sans-serif;
       color: white;
-      line-height: 1.8;
-      font-size: 20px;
       background: black;
+      font-size: 20px;
+      line-height: 1.5;
     }
 
     .page-wrapper {
@@ -38,26 +38,24 @@
       top: 0;
     }
 
-    h1 {
-      font-size: 2em;
+    h1, h2 {
       text-align: center;
-      margin-bottom: 30px;
       color: #f0f0ff;
-      font-style: normal; /* ensure titles are not italic */
-    }
-
-    h2 {
-      text-align: center;
-      color: #ffffff;
+      font-style: normal;
       margin-top: 40px;
       margin-bottom: 20px;
-      font-style: normal; /* ensure titles are not italic */
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 2em;
     }
 
     p {
-      margin-bottom: 20px;
-      text-align: center;
       font-style: italic;
+      margin: 0 0 18px 0;
+      text-align: center;
+      line-height: 1.5;
     }
 
     iframe {
@@ -72,26 +70,24 @@
       list-style: none;
       padding: 0;
       text-align: center;
+      margin: 0 auto 40px auto;
+      max-width: 600px;
     }
 
     ul.reminders li {
-      margin-bottom: 15px;
+      margin-bottom: 12px;
       font-style: italic;
+      line-height: 1.5;
     }
 
     blockquote {
-      margin: 0 0 15px 0;
       font-style: italic;
-      line-height: 1.6;
       text-align: center;
-    }
-
-    #heartMsg {
-      display: none;
-      font-style: italic;
-      margin-top: 10px;
-      transition: opacity 0.4s ease;
-      opacity: 0;
+      margin: 0 0 18px 0;
+      line-height: 1.5;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .poem-section {
@@ -109,15 +105,44 @@
       white-space: pre-line;
       font-style: italic;
       font-size: 18px;
-      color: #dddddd;
+      color: #ddd;
       max-width: 600px;
       margin: 0 auto;
-      line-height: 1.7;
+      line-height: 1.5;
     }
 
+    #heartMsg {
+      display: none;
+      font-style: italic;
+      margin-top: 10px;
+      transition: opacity 0.4s ease;
+      opacity: 0;
+      text-align: center;
+    }
+
+    .countup-timer {
+      text-align: center;
+      margin-top: 60px;
+      font-style: italic;
+      font-size: 22px;
+    }
+
+    button#heartButton {
+      font-size: 40px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: block;
+      margin: 40px auto 10px auto;
+      color: #f0f0ff;
+      transition: color 0.3s ease;
+    }
+
+    button#heartButton:hover {
+      color: #ff4d6d;
+    }
   </style>
 </head>
-
 <body>
   <div class="page-wrapper">
     <div class="content">
@@ -129,7 +154,6 @@
       <p>I don’t wanna spend a second without you; I adore you endlessly and I can't wait to be with you for the rest of my life, beary bear.</p>
 
       <h2>Our Songs</h2>
-
       <iframe src="https://open.spotify.com/embed/track/7mykoq6R3BArsSpNDjFQTm?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       <iframe src="https://open.spotify.com/embed/track/0j3mqDTK4Z6lvrLzFCUUz6?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       <iframe src="https://open.spotify.com/embed/track/2ispbUjxKz1K2j5zE9eNwu?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -138,7 +162,6 @@
       <iframe src="https://open.spotify.com/embed/track/52abQEHHYwE5eGxLG0zcH5" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>   
 
       <h2>Reminders</h2>
-
       <ul class="reminders">
         <li>You will never be alone in this world, not when I'm here.</li>
         <li>I adore every single thing about you, from head to toe.</li>
@@ -148,7 +171,7 @@
       </ul>
 
       <h2>Quotes That Remind Me of You</h2>
-      <div style="text-align:center; font-style: italic;">
+      <div style="text-align:center; font-style: italic; max-width: 600px; margin: 0 auto 40px auto;">
         <blockquote>“I had never met a soul that could speak my language, until there was you. You are fluent in me.”</blockquote>
         <blockquote>“If you were the sun, I would continue to stare at you, even if it costs me my vision; for I would know the last thing I saw was perfection.”</blockquote>
         <blockquote>“I could fill oceans for what I feel for you.”</blockquote>
@@ -170,9 +193,9 @@
         <li>The way you say "huh" or "must've been the birds", when pretending not to have said something.</li>
       </ul>
 
-      <div class="countup-timer" style="text-align:center; margin-top: 60px;">
+      <div class="countup-timer">
         <h2>How Long We've Been Us</h2>
-        <p id="countup" style="font-style: italic; font-size: 22px; margin-top: 10px;"></p>
+        <p id="countup"></p>
       </div>
 
       <div class="poem-section">
@@ -192,10 +215,8 @@
         </div>
       </div>
 
-      <div style="text-align:center; margin-top: 40px;">
-        <button id="heartButton" style="font-size: 40px; background: none; border: none; cursor: pointer;">𓆩❤𓆪</button>
-        <p id="heartMsg">I keep this here to remind you that even when I’m not around, my heart still is.</p>
-      </div>
+      <button id="heartButton" aria-label="Show heart message">𓆩❤𓆪</button>
+      <p id="heartMsg">I keep this here to remind you that even when I’m not around, my heart still is.</p>
 
     </div>
   </div>
@@ -206,7 +227,7 @@
       const msg = document.getElementById("heartMsg");
 
       button.addEventListener("click", function () {
-        if (msg.style.display === "none" || msg.style.opacity === "0") {
+        if (msg.style.display === "none" || msg.style.opacity === "0" || !msg.style.display) {
           msg.style.display = "block";
           setTimeout(() => { msg.style.opacity = 1; }, 10);
         } else {
@@ -214,29 +235,27 @@
           setTimeout(() => { msg.style.display = "none"; }, 400);
         }
       });
-    });
 
-    function updateCountup() {
-      const startDate = new Date('2025-01-01T00:00:00');
-      const now = new Date();
-      let diff = now - startDate;
+      function updateCountup() {
+        const startDate = new Date('2025-01-01T00:00:00');
+        const now = new Date();
+        let diff = now - startDate;
 
-      if(diff < 0) {
-        document.getElementById('countup').textContent = "The journey is about to begin...";
-        return;
+        if(diff < 0) {
+          document.getElementById('countup').textContent = "The journey is about to begin...";
+          return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        diff -= days * (1000 * 60 * 60 * 24);
+        const hours = Math.floor(diff / (1000 * 60 * 60));
+        diff -= hours * (1000 * 60 * 60);
+        const minutes = Math.floor(diff / (1000 * 60));
+
+        document.getElementById('countup').textContent =
+          ${days} days, ${hours} hours, and ${minutes} minutes together;
       }
 
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      diff -= days * (1000 * 60 * 60 * 24);
-      const hours = Math.floor(diff / (1000 * 60 * 60));
-      diff -= hours * (1000 * 60 * 60);
-      const minutes = Math.floor(diff / (1000 * 60));
-
-      document.getElementById('countup').textContent = 
-        ${days} days, ${hours} hours, and ${minutes} minutes together;
-    }
-
-    window.addEventListener('DOMContentLoaded', () => {
       updateCountup();
       setInterval(updateCountup, 60000); // update every minute
     });
